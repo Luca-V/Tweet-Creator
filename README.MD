@@ -1,6 +1,4 @@
-==========================================================================================
-
-                Tweets creator ( Twitter API ) by DaddyRebotingg
+                 Tweets creator ( Twitter API ) by DaddyRebotingg
 
                     To use this api you should go at index.js
 
@@ -26,5 +24,3 @@
 
                                     Discord
                                 DaddyRebotingg#7013
-
-==========================================================================================
