@@ -1,0 +1,12 @@
+{
+  "name": "twitter",
+  "version": "1.0.0",
+  "description": "Tweet Creator",
+  "main": "index.js",
+  "scripts": {},
+  "author": "DaddyRebotingg",
+  "license": "ISC",
+  "dependencies": {
+    "twitter": "^1.7.1"
+  }
+}
