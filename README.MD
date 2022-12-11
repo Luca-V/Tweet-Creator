@@ -1,4 +1,4 @@
-                 Tweets creator ( Twitter API ) by DaddyRebotingg
+                 Tweets creator ( Twitter API ) by Me
 
                     To use this api you should go at index.js
 
@@ -15,12 +15,3 @@
                                 Command Init:
 
                                 node index.js
-
-
-                Contact for more information if you need help:
-
-                                    Twitter
-                        https://twitter.com/DaddyRebotingg
-
-                                    Discord
-                                DaddyRebotingg#7013

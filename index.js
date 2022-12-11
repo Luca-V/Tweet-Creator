@@ -12,15 +12,15 @@ const params = {
     q: "",
 
     // number of tweets to return
-    count: 10,
+    count: 10
 };
 
 // lookup tweets of the user twitter account
-client.get("search/tweets", params, function (error, tweets, response) {
+client.get("search/tweets", params, (error, tweets, response) => {
     console.log(tweets);
 });
 
 // post a tweet
-client.post("statuses/update", { status: "" }, function (error, tweet, response) {
+client.post("statuses/update", { status: "" }, (error, tweet, response) => {
     console.log(tweet);
 });
