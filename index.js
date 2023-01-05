@@ -1,26 +1,26 @@
-const { Twitter } = require("twitter");
+const Twitter = require("twitter");
+const config = require("./config");
 
 const client = new Twitter({
-    consumer_key: "",
-    consumer_secret: "",
-    access_token_key: "",
-    access_token_secret: ""
-});
+    consumer_key: config.authentication.consumer_key,
+    consumer_secret: config.authentication.consumer_secret,
+    access_token_key: config.authentication.access_token_key,
+    access_token_secret: config.authentication.access_token_secret
+})
 
-const params = {
-    // screen name of the user
-    q: "",
+if (config.GET_Tweets === true) {
+    const params = {
+        q: config.params.screen_name,
+        count: config.params.tweets_count
+    };
 
-    // number of tweets to return
-    count: 10
-};
-
-// lookup tweets of the user twitter account
-client.get("search/tweets", params, (error, tweets, response) => {
-    console.log(tweets);
-});
-
-// post a tweet
-client.post("statuses/update", { status: "" }, (error, tweet, response) => {
-    console.log(tweet);
-});
+    client.get("search/tweets", params, (error, tweets, response) => {
+        console.log(tweets);
+    });
+} else if (config.POST_Tweet === true) {
+    client.post("statuses/update", { status: config.tweet.create.status }, (error, tweet, response) => {
+        console.log(tweet);
+    });
+} else {
+    console.log("Please Configure the Fields Correctly");
+}
