@@ -8,7 +8,7 @@ const client = new Twitter({
     access_token_secret: config.authentication.access_token_secret
 })
 
-if (config.GET_Tweets === true) {
+if (config.GET_Tweets) {
     const params = {
         q: config.params.screen_name,
         count: config.params.tweets_count
@@ -17,7 +17,7 @@ if (config.GET_Tweets === true) {
     client.get("search/tweets", params, (error, tweets, response) => {
         console.log(tweets);
     });
-} else if (config.POST_Tweet === true) {
+} else if (config.POST_Tweet) {
     client.post("statuses/update", { status: config.tweet.create.status }, (error, tweet, response) => {
         console.log(tweet);
     });
